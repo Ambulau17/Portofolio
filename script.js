@@ -82,6 +82,24 @@ document.querySelectorAll('.navbar ul li a').forEach(anchor => {
   
 // nav
 
+// SweetAlert2 for Download CV
+document.getElementById('downloadCV').addEventListener('click', function (e) {
+    e.preventDefault(); // Mencegah download langsung
+    Swal.fire({
+        title: 'Download CV',
+        text: 'Apakah Anda ingin mengunduh CV saya?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, Unduh!',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Jika user konfirmasi, lanjutkan download
+            window.location.href = 'cv/cv.pdf';
+        }
+    });
+});
+
 
 // Scroll to Top Button
 const scrollToTopButton = document.querySelector('.scroll-to-top');
