@@ -76,11 +76,16 @@ button:hover, a:hover {
 
 /* Hero Section */
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  animation: fadeIn 1.5s ease-out; /* Animasi fade-in */
+    display: flex;
+    justify-content: center; /* Mengatur konten secara horizontal ke tengah */
+    align-items: center; /* Mengatur konten secara vertikal ke tengah */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    height: 100vh; /* Mengatur tinggi hero agar memenuhi layar */
+}
+
+.content {
+    max-width: 600px; /* Mengatur lebar maksimum konten */
+    margin: 0 auto; /* Mengatur margin otomatis agar konten berada di tengah */
 }
 
 @keyframes fadeIn {
@@ -151,10 +156,10 @@ button:hover, a:hover {
 }
 
 .social-links {
-  display: flex;
-  gap: 10px;
-  margin: 20px 0;
-  animation: slideIn 1s ease-out; /* Animasi muncul */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    gap: 10px; /* Jarak antara ikon sosial */
 }
 
 @keyframes slideIn {
@@ -178,6 +183,10 @@ button:hover, a:hover {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s; /* Menambahkan animasi transform */
+}
+
+#downloadCV {
+    margin-top: 10px; /* Atau sesuaikan dengan ukuran yang diinginkan */
 }
 
 .download-cv:hover {
